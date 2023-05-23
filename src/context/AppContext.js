@@ -71,6 +71,27 @@ export const AppReducer = (state, action) => {
                 ...state
             }
 
+        case 'OVER_MAX_BUDGET':
+            action.type = "DONE";
+            state.budget = 20000;
+            return {
+                ...state
+            }
+
+        case 'SET_TOTAL_BUDGET':
+            action.type = "DONE";
+            state.budget = action.payload;
+            return {
+                ...state
+            }
+        
+        case 'UNDER_SPENDING':
+            action.type = "DONE";
+            state.budget = action.payload;
+            return {
+                ...state
+            }
+
         default:
             return state;
     }
